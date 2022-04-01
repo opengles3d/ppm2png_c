@@ -53,7 +53,7 @@ int main(int argc, char** argv)
     std::string r, g, b;
     for (row = 0; row < imageSize && fd; row += BPP) {
         fd >> r >> g >> b;
-        // Windows bitmaps are BGR
+        // RGB data
         imageData[row] = static_cast<unsigned char> (std::stoi(r));
         imageData[row + 1] = static_cast<unsigned char> (std::stoi(g));
         imageData[row + 2] = static_cast<unsigned char> (std::stoi(b));
